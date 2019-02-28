@@ -19,6 +19,15 @@ $(DEFINITION) : $(DEFINITION_NAME).k
 %.search.final.output: %.$(DEFINITION) $(DEFINITION) $(KORE_EXEC)
 	$(KRUN) $(KRUN_OPTS) $< --output-file $@ --search-final
 
+%.search.star.output: %.$(DEFINITION_NAME) $(DEFINITION) $(KORE_EXEC)
+	$(KRUN) $(KRUN_OPTS) $< --output-file $@ --search-all
+
+%.search.plus.output: %.$(DEFINITION_NAME) $(DEFINITION) $(KORE_EXEC)
+	$(KRUN) $(KRUN_OPTS) $< --output-file $@ --search-one-or-more-steps
+
+%.search.one.output: %.$(DEFINITION_NAME) $(DEFINITION) $(KORE_EXEC)
+	$(KRUN) $(KRUN_OPTS) $< --output-file $@ --search-one-step
+
 %.output: %.$(DEFINITION_NAME) $(DEFINITION) $(KORE_EXEC)
 	$(KRUN) $(KRUN_OPTS) $< --output-file $@
 
