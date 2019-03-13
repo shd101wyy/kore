@@ -1,0 +1,25 @@
+[]
+module MAX-SPEC
+
+// imports
+import VERIFICATION []
+
+
+// claims
+// rule `<generatedTop>`(`<T>`(`<k>`(`if(_)_else__IMP-SYNTAX__BExp_Block_Block`(`_<=__IMP-SYNTAX__AExp_AExp`(#token("a","Id"),#token("b","Id")),`{_}_IMP-SYNTAX__Stmt`(`_=_;_IMP-SYNTAX__Id_AExp`(#token("max","Id"),#token("b","Id"))),`{_}_IMP-SYNTAX__Stmt`(`_=_;_IMP-SYNTAX__Id_AExp`(#token("max","Id"),#token("a","Id"))))=>.K),`<state>`(`_Map_`(`_Map_`(`_|->_`(#token("a","Id"),A),`_|->_`(#token("b","Id"),B)),`_|->_`(#token("max","Id"),_24=>A)))),DotVar0) requires `_>=Int__INT__Int_Int`(A,B) ensures #token("true","Bool") [contentStartColumn(5) contentStartLine(18) org.kframework.attributes.Location(Location(18,5,30,23)) org.kframework.attributes.Source(Source(/home/daejunpark/kore/src/main/k/working/imp/prove/max-spec.k)) org.kframework.definition.Production(syntax #RuleContent ::= #RuleBody "requires" K)]
+  claim{} \rewrites{SortGeneratedTopCell{}} (
+      \and{SortGeneratedTopCell{}} (
+        \equals{SortBool{},SortGeneratedTopCell{}}(
+          Lbl'Unds-GT-Eqls'Int'UndsUnds'INT'UndsUnds'Int'Unds'Int{}(VarA:SortInt{},VarB:SortInt{}),
+          \dv{SortBool{}}("true")),
+        Lbl'-LT-'generatedTop'-GT-'{}(Lbl'-LT-'T'-GT-'{}(Lbl'-LT-'k'-GT-'{}(kseq{}(inj{SortStmt{}, SortKItem{}}(Lblif'LParUndsRParUnds'else'UndsUnds'IMP-SYNTAX'UndsUnds'BExp'Unds'Block'Unds'Block{}(Lbl'Unds-LT-EqlsUndsUnds'IMP-SYNTAX'UndsUnds'AExp'Unds'AExp{}(inj{SortId{}, SortAExp{}}(\dv{SortId{}}("a")),inj{SortId{}, SortAExp{}}(\dv{SortId{}}("b"))),Lbl'LBraUndsRBraUnds'IMP-SYNTAX'UndsUnds'Stmt{}(Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'UndsUnds'Id'Unds'AExp{}(\dv{SortId{}}("max"),inj{SortId{}, SortAExp{}}(\dv{SortId{}}("b")))),Lbl'LBraUndsRBraUnds'IMP-SYNTAX'UndsUnds'Stmt{}(Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'UndsUnds'Id'Unds'AExp{}(\dv{SortId{}}("max"),inj{SortId{}, SortAExp{}}(\dv{SortId{}}("a")))))),dotk{}())),Lbl'-LT-'state'-GT-'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortId{}, SortKItem{}}(\dv{SortId{}}("a")),inj{SortInt{}, SortKItem{}}(VarA:SortInt{})),Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortId{}, SortKItem{}}(\dv{SortId{}}("b")),inj{SortInt{}, SortKItem{}}(VarB:SortInt{}))),Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortId{}, SortKItem{}}(\dv{SortId{}}("max")),Var'Unds'24:SortKItem{})))),VarDotVar0:SortGeneratedCounterCell{})
+      ),
+      \and{SortGeneratedTopCell{}} (
+        \top{SortGeneratedTopCell{}}(), 
+        \bottom{SortGeneratedTopCell{}}()
+//      Lbl'-LT-'generatedTop'-GT-'{}(Lbl'-LT-'T'-GT-'{}(Lbl'-LT-'k'-GT-'{}(dotk{}()),Lbl'-LT-'state'-GT-'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortId{}, SortKItem{}}(\dv{SortId{}}("a")),inj{SortInt{}, SortKItem{}}(VarA:SortInt{})),Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortId{}, SortKItem{}}(\dv{SortId{}}("b")),inj{SortInt{}, SortKItem{}}(VarB:SortInt{}))),Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortId{}, SortKItem{}}(\dv{SortId{}}("max")),inj{SortInt{}, SortKItem{}}(VarA:SortInt{}))))),VarDotVar0:SortGeneratedCounterCell{})
+      )
+  )
+  [org'Stop'kframework'Stop'definition'Stop'Production{}(), org'Stop'kframework'Stop'attributes'Stop'Source{}(), org'Stop'kframework'Stop'attributes'Stop'Location{}(), contentStartLine{}(), contentStartColumn{}()]
+
+endmodule [org'Stop'kframework'Stop'attributes'Stop'Location{}(), org'Stop'kframework'Stop'attributes'Stop'Source{}()]

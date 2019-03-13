@@ -27,6 +27,6 @@ else
     b |-> B:Int
     max |-> (_ => A)
     </state>
-    requires A >Int B
+    requires A >=Int B
 
 endmodule
