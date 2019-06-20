@@ -3,6 +3,7 @@
 
 *.cache
 *.class
+*.depend
 *.iml
 *.ipr
 *.iws
