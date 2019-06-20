@@ -9,7 +9,7 @@ test: test-k
 
 test-k: test-prove
 
-test-prove: $(foreach test, $(prove_tests), prove/$(test).kprove)
+test-prove: $(foreach test, $(prove_tests), $(test).kprove)
 
 golden: $(foreach test, $(all_tests), tests/$(test).output.golden)
 

@@ -1,4 +1,10 @@
-module PASSING-SPEC
+// Copyright (c) 2019 K Team. All Rights Reserved.
+
+module VERIFICATION
     imports LABELED-CLAIMS
-    rule <k> a => c ... </k>
+endmodule
+
+module PASSING-SPEC
+    imports VERIFICATION
+    rule [aname] : <k> a => c ... </k>
 endmodule
