@@ -10,7 +10,6 @@ Portability : portable
 module Kore.Step.Simplification.Exists
     ( simplify
     , makeEvaluate
-    , simplifyEvaluated
     ) where
 
 import Prelude.Kore
