@@ -72,17 +72,20 @@ test_simplifyCondition =
                 Condition.fromPredicate
                 $ Predicate.makeNotPredicate existsPredicate
         assertNormalized expect
-    , testCase "x = f(x)" $ do
-        let x = inject Mock.x
-            expect =
+    , testCase "THISTEST x = f(x)" $ do
+        traceM "Entering test case x = f(x)"
+        let !x = inject Mock.x
+            !expect =
                 Predicate.makeEqualsPredicate (mkVar x) (Mock.f (mkVar x))
                 & OrCondition.fromPredicate
-            denormalized =
+            !denormalized =
                 Substitution.mkUnwrappedSubstitution
                 [(x, Mock.f (mkVar x))]
-            input =
+            !input =
                 (Condition.fromSubstitution . Substitution.wrap) denormalized
+        traceM "BEGIN"
         actual <- normalizeExcept input
+        traceM "END"
         assertEqual "Expected SubstitutionError" expect actual
     , testCase "x = id(x)" $ do
         let x = inject Mock.x
@@ -404,12 +407,18 @@ normalize =
 normalizeExcept
     :: Conditional VariableName ()
     -> IO (MultiOr (Conditional VariableName ()))
-normalizeExcept predicated =
-    fmap MultiOr.make
-    $ Test.runSimplifier mockEnv
-    $ Monad.Unify.runUnifierT Not.notSimplifier
-    $ Logic.lowerLogicT
-    $ Simplifier.simplifyCondition SideCondition.top predicated
+normalizeExcept predicated = do
+    traceM "normalizeExcept BEGIN"
+    let !result1 = trace "NORMALIZEEXCEPT0" $ Simplifier.simplifyCondition SideCondition.top predicated
+    let !result2 = trace "NORMALIZEEXCEPT1" $ Logic.lowerLogicT result1
+    
+    let !result3 = trace "NORMALIZEEXCEPT2" $ Monad.Unify.runUnifierT Not.notSimplifier result2
+    
+    let !result4 = trace "NORMALIZEEXCEPT3" $ Test.runSimplifier mockEnv (trace "BEFORE RESULT333333333" result3)
+    result5 <- result4
+    -- result <- fmap MultiOr.make result4
+    traceM "normalizeExcept END"
+    return $ trace "inside RETURN" $ MultiOr.make result5
   where
     mockEnv = Mock.env { simplifierAxioms }
     simplifierAxioms =

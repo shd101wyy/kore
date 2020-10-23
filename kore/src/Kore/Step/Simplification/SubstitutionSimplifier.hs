@@ -99,6 +99,7 @@ import Logic
     ( LogicT
     )
 import qualified Pretty
+import Kore.Unparser (unparse)
 
 newtype SubstitutionSimplifier simplifier =
     SubstitutionSimplifier
@@ -130,12 +131,14 @@ substitutionSimplifier =
         => SideCondition variable
         -> Substitution variable
         -> simplifier (OrCondition variable)
-    wrapper sideCondition substitution =
+    wrapper sideCondition substitution = trace ("WRAPPER") $
         OrCondition.observeAllT $ do
+            traceM "SUBSTITUTION simplifier BEGIN"
             (predicate, result) <- worker substitution & maybeT empty return
             let condition = Condition.fromNormalizationSimplified result
             let condition' = Condition.fromPredicate predicate <> condition
             TopBottom.guardAgainstBottom condition'
+            traceM "SUBSTITUTION simplifier END (after guard)"
             return condition'
       where
         worker = simplifySubstitutionWorker sideCondition simplificationMakeAnd

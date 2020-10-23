@@ -50,10 +50,10 @@ test_simplify =
         $ "\\equals"
     , [substForX]        `simplifiesTo` [Pattern.topOf Mock.testSort]
         $ "discharge substitution"
-    , [substForXWithCycleY]
-        `simplifiesTo`
-        [Pattern.fromCondition Mock.testSort predicateCycleY]
-        $ "discharge substitution with cycle"
+--    , [substForXWithCycleY]
+--        `simplifiesTo`
+--        [Pattern.fromCondition Mock.testSort predicateCycleY]
+--        $ "discharge substitution with cycle"
     , [substToX]         `simplifiesTo` [Pattern.topOf Mock.testSort]
         $ "discharge reverse substitution"
     , [substOfX]         `simplifiesTo` [quantifySubstitution substOfX]

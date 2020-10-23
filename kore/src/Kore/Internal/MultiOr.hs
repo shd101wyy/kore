@@ -165,7 +165,7 @@ make
     :: (Ord term, TopBottom term)
     => [term]
     -> MultiOr term
-make patts = filterOr (MultiOr patts)
+make patts = trace "Entering MAKKKKKE" $ filterOr (MultiOr patts)
 
 {- | Construct a normalized 'MultiOr' from a single pattern.
 -}

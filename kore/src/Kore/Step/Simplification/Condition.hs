@@ -101,23 +101,33 @@ simplify SubstitutionSimplifier { simplifySubstitution } sideCondition =
     normalize >=> worker
   where
     worker Conditional { term, predicate, substitution } = do
+        traceM "BEGINNING of Condition simplify worker"
         let substitution' = Substitution.toMap substitution
             predicate' = Predicate.substitute substitution' predicate
         simplified <- simplifyPredicate sideCondition predicate'
         TopBottom.guardAgainstBottom simplified
         let merged = simplified <> Condition.fromSubstitution substitution
+        traceM "between"
+        traceM "between2"
         normalized <- normalize merged
         -- Check for full simplification *after* normalization. Simplification
         -- may have produced irrelevant substitutions that become relevant after
         -- normalization.
+        traceM "before the let"
+        traceM "before the let 2"
         let simplifiedPattern =
                 Lens.traverseOf
                     (field @"predicate")
                     simplifyConjunctions
                     normalized { term }
+        traceM "before the if"
+        traceM "before the if 2"
         if fullySimplified simplifiedPattern
-            then return (extract simplifiedPattern)
-            else worker (extract simplifiedPattern)
+            then traceM "END of Condition simplify worker" >> return (extract simplifiedPattern)
+            else do
+                result <- worker (extract simplifiedPattern)
+                traceM "END2 of Condition simplify worker"
+                return result
 
     -- TODO(Ana): this should also check if the predicate is simplified
     fullySimplified (Unchanged Conditional { predicate, substitution }) =
@@ -132,10 +142,14 @@ simplify SubstitutionSimplifier { simplifySubstitution } sideCondition =
         ->  LogicT simplifier (Conditional variable any')
     normalize conditional@Conditional { substitution } = do
         let conditional' = conditional { substitution = mempty }
-        predicates' <- lift $
+        
+        predicates' <- trace "before substitution simp" $ lift $
             simplifySubstitution sideCondition substitution
-        predicate' <- scatter predicates'
-        return $ Conditional.andCondition conditional' predicate'
+        predicate' <- trace "after substitution simp" $
+            trace "before scatter preds" $
+            scatter predicates'
+        
+        return $ trace ("after scatter preds: " ++ show (unparse predicate')) $ Conditional.andCondition conditional' predicate'
 
 {- | Simplify the 'Predicate' once.
 
