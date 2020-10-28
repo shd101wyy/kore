@@ -1,7 +1,7 @@
 kore> test (suite: kore-test, args: -p THISTEST +RTS -N1)
 
 Entering test case x = f(x)
-BEGINConditional {term = (), predicate = GenericPredicate (TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "_PREDICATE", idLocation = AstLocationImplicit}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList []}, functional = Functional {isFunctional = False}, function = Function {isFunction = False}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< TopF (Top {topSort = SortActualSort (SortActual {sortActualName = Id {getId = "_PREDICATE", idLocation = AstLocationImplicit}, sortActualSorts = []})})}), substitution = Substitution [Assignment_ {assignedVariable = Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, assignedTerm = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = False}, function = Function {isFunction = True}, defined = Defined {isDefined = False}, created = Created {getCreated = Just [("f",SrcLoc {srcLocPackage = "main", srcLocModule = "Test.Kore.Unification.UnifierT", srcLocFile = "test/Test/Kore/Unification/UnifierT.hs", srcLocStartLine = 85, srcLocStartCol = 22, srcLocEndLine = 85, srcLocEndCol = 38})]}, simplified = Simplified (SimplifiedData {sType = Partly, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< ApplySymbolF (Application {applicationSymbolOrAlias = Symbol {symbolConstructor = Id {getId = "f", idLocation = AstLocationTest}, symbolParams = [], symbolSorts = ApplicationSorts {applicationSortsOperands = [SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})], applicationSortsResult = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, symbolAttributes = Symbol {function = Function {isDeclaredFunction = True}, functional = Functional {isDeclaredFunctional = False}, constructor = Constructor {isConstructor = False}, injective = Injective {isDeclaredInjective = False}, sortInjection = SortInjection {isSortInjection = False}, anywhere = Anywhere {isAnywhere = False}, hook = Hook {getHook = Nothing}, smtlib = Smtlib {getSmtlib = Nothing}, smthook = Smthook {getSmthook = Nothing}, memo = Memo {isMemo = False}, klabel = Klabel {getKlabel = Nothing}, symbolKywd = SymbolKywd {isSymbolKywd = False}, noEvaluators = NoEvaluators {hasNoEvaluators = False}}}, applicationChildren = [TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}]})}}]}
+BEGINConditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = Substitution [Assignment_ {assignedVariable = Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, assignedTerm = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = False}, function = Function {isFunction = True}, defined = Defined {isDefined = False}, created = Created {getCreated = Just [("f",SrcLoc {srcLocPackage = "main", srcLocModule = "Test.Kore.Unification.UnifierT", srcLocFile = "test/Test/Kore/Unification/UnifierT.hs", srcLocStartLine = 85, srcLocStartCol = 22, srcLocEndLine = 85, srcLocEndCol = 38})]}, simplified = Simplified (SimplifiedData {sType = Partly, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< ApplySymbolF (Application {applicationSymbolOrAlias = Symbol {symbolConstructor = Id {getId = "f", idLocation = AstLocationTest}, symbolParams = [], symbolSorts = ApplicationSorts {applicationSortsOperands = [SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})], applicationSortsResult = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, symbolAttributes = Symbol {function = Function {isDeclaredFunction = True}, functional = Functional {isDeclaredFunctional = False}, constructor = Constructor {isConstructor = False}, injective = Injective {isDeclaredInjective = False}, sortInjection = SortInjection {isSortInjection = False}, anywhere = Anywhere {isAnywhere = False}, hook = Hook {getHook = Nothing}, smtlib = Smtlib {getSmtlib = Nothing}, smthook = Smthook {getSmthook = Nothing}, memo = Memo {isMemo = False}, klabel = Klabel {getKlabel = Nothing}, symbolKywd = SymbolKywd {isSymbolKywd = False}, noEvaluators = NoEvaluators {hasNoEvaluators = False}}}, applicationChildren = [TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}]})}}]}
 normalizeExcept BEGIN
 NORMALIZEEXCEPT0
 NORMALIZEEXCEPT1
@@ -29,7 +29,7 @@ SUBSTITUTION simplifier END (after guard)
 after substitution simp
 before scatter preds
 Entering MAKKKKKE
-after scatter preds: Conditional {term = (), predicate = GenericPredicate (TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "_PREDICATE", idLocation = AstLocationImplicit}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList []}, functional = Functional {isFunctional = False}, function = Function {isFunction = False}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< TopF (Top {topSort = SortActualSort (SortActual {sortActualName = Id {getId = "_PREDICATE", idLocation = AstLocationImplicit}, sortActualSorts = []})})}), substitution = NormalizedSubstitution (fromList [])}
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
 BEGINNING of Condition simplify worker
 Entering MAKKKKKE
 between
@@ -49,7 +49,7 @@ before the let
 before the let 2
 before the if
 before the if 2
-after scatter preds: Conditional {term = (), predicate = GenericPredicate (TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "_PREDICATE", idLocation = AstLocationImplicit}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList []}, functional = Functional {isFunctional = False}, function = Function {isFunction = False}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< TopF (Top {topSort = SortActualSort (SortActual {sortActualName = Id {getId = "_PREDICATE", idLocation = AstLocationImplicit}, sortActualSorts = []})})}), substitution = NormalizedSubstitution (fromList [])}
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
 END of Condition simplify worker
 Entering MAKKKKKE
 Entering MAKKKKKE
@@ -67,7 +67,42 @@ STILL IN LOOP 3 27/10/20
 Leaving LOOP 27/10/20 with normalization. The bools are: True False and False
 after substitution simp
 before scatter preds
-after scatter preds: Conditional {term = (), predicate = GenericPredicate (TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "_PREDICATE", idLocation = AstLocationImplicit}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = False}, function = Function {isFunction = False}, defined = Defined {isDefined = False}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< EqualsF (Equals {equalsOperandSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), equalsResultSort = SortActualSort (SortActual {sortActualName = Id {getId = "_PREDICATE", idLocation = AstLocationImplicit}, sortActualSorts = []}), equalsFirst = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}, equalsSecond = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = False}, function = Function {isFunction = True}, defined = Defined {isDefined = False}, created = Created {getCreated = Nothing}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< ApplySymbolF (Application {applicationSymbolOrAlias = Symbol {symbolConstructor = Id {getId = "f", idLocation = AstLocationTest}, symbolParams = [], symbolSorts = ApplicationSorts {applicationSortsOperands = [SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})], applicationSortsResult = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, symbolAttributes = Symbol {function = Function {isDeclaredFunction = True}, functional = Functional {isDeclaredFunctional = False}, constructor = Constructor {isConstructor = False}, injective = Injective {isDeclaredInjective = False}, sortInjection = SortInjection {isSortInjection = False}, anywhere = Anywhere {isAnywhere = False}, hook = Hook {getHook = Nothing}, smtlib = Smtlib {getSmtlib = Nothing}, smthook = Smthook {getSmthook = Nothing}, memo = Memo {isMemo = False}, klabel = Klabel {getKlabel = Nothing}, symbolKywd = SymbolKywd {isSymbolKywd = False}, noEvaluators = NoEvaluators {hasNoEvaluators = False}}}, applicationChildren = [TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}]})}})}), substitution = NormalizedSubstitution (fromList [])}
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< EqualsF (Equals {equalsOperandSort = (), equalsResultSort = (), equalsFirst = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}, equalsSecond = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = False}, function = Function {isFunction = True}, defined = Defined {isDefined = False}, created = Created {getCreated = Nothing}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< ApplySymbolF (Application {applicationSymbolOrAlias = Symbol {symbolConstructor = Id {getId = "f", idLocation = AstLocationTest}, symbolParams = [], symbolSorts = ApplicationSorts {applicationSortsOperands = [SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})], applicationSortsResult = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, symbolAttributes = Symbol {function = Function {isDeclaredFunction = True}, functional = Functional {isDeclaredFunctional = False}, constructor = Constructor {isConstructor = False}, injective = Injective {isDeclaredInjective = False}, sortInjection = SortInjection {isSortInjection = False}, anywhere = Anywhere {isAnywhere = False}, hook = Hook {getHook = Nothing}, smtlib = Smtlib {getSmtlib = Nothing}, smthook = Smthook {getSmthook = Nothing}, memo = Memo {isMemo = False}, klabel = Klabel {getKlabel = Nothing}, symbolKywd = SymbolKywd {isSymbolKywd = False}, noEvaluators = NoEvaluators {hasNoEvaluators = False}}}, applicationChildren = [TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}]})}})))}, substitution = NormalizedSubstitution (fromList [])}
+before substitution simp
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
 Entering MAKKKKKE
 before substitution simp
 ENTERING LOOP 27/10/20
@@ -78,42 +113,886 @@ Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
 after substitution simp
 before scatter preds
 before the let
-after scatter preds: Conditional {term = (), predicate = GenericPredicate (TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "_PREDICATE", idLocation = AstLocationImplicit}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList []}, functional = Functional {isFunctional = False}, function = Function {isFunction = False}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< TopF (Top {topSort = SortActualSort (SortActual {sortActualName = Id {getId = "_PREDICATE", idLocation = AstLocationImplicit}, sortActualSorts = []})})}), substitution = NormalizedSubstitution (fromList [])}
-normalizeExcept END
-inside RETURN
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
 Entering MAKKKKKE
-END
-[\and{_PREDICATE{}}(
-    /* term: */
-    /* D Sfa */ \top{_PREDICATE{}}(),
-\and{_PREDICATE{}}(
-    /* predicate: */
-    /* Sfa */
-    \equals{testSort{}, _PREDICATE{}}(
-        /* Fl Fn D Sfa */ x:testSort{},
-        /* Fn Sfa */ f{}(/* Fl Fn D Sfa */ x:testSort{})
-    ),
-    /* substitution: */
-    \top{_PREDICATE{}}()
-))]
-[\and{_PREDICATE{}}(
-    /* term: */
-    /* D Sfa */ \top{_PREDICATE{}}(),
-\and{_PREDICATE{}}(
-    /* predicate: */
-    /* Spa */
-    \equals{testSort{}, _PREDICATE{}}(
-        /* Fl Fn D Sfa */ x:testSort{},
-        /* Created: Test.Kore.Unification.UnifierT.f */
-        /* Fn Spa */
-        f{}(/* Fl Fn D Sfa */ x:testSort{})
-    ),
-    /* substitution: */
-    \top{_PREDICATE{}}()
-))]
-OK (0.12s)
-
-All 1 tests passed (0.12s)
-
-kore> Test suite kore-test passed
-Completed 2 action(s).
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+FINAL STRETCH 1 27/10/20[Assignment_ {assignedVariable = Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, assignedTerm = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = False}, function = Function {isFunction = True}, defined = Defined {isDefined = False}, created = Created {getCreated = Nothing}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< ApplySymbolF (Application {applicationSymbolOrAlias = Symbol {symbolConstructor = Id {getId = "f", idLocation = AstLocationTest}, symbolParams = [], symbolSorts = ApplicationSorts {applicationSortsOperands = [SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})], applicationSortsResult = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, symbolAttributes = Symbol {function = Function {isDeclaredFunction = True}, functional = Functional {isDeclaredFunctional = False}, constructor = Constructor {isConstructor = False}, injective = Injective {isDeclaredInjective = False}, sortInjection = SortInjection {isSortInjection = False}, anywhere = Anywhere {isAnywhere = False}, hook = Hook {getHook = Nothing}, smtlib = Smtlib {getSmtlib = Nothing}, smthook = Smthook {getSmthook = Nothing}, memo = Memo {isMemo = False}, klabel = Klabel {getKlabel = Nothing}, symbolKywd = SymbolKywd {isSymbolKywd = False}, noEvaluators = NoEvaluators {hasNoEvaluators = False}}}, applicationChildren = [TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}]})}}]NormalizedSubstitution (fromList [])
+FINAL STRETCH 2 27/10/20
+FINAL STRETCH 3 27/10/20
+FINAL STRETCH 4 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True False and False
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< EqualsF (Equals {equalsOperandSort = (), equalsResultSort = (), equalsFirst = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}, equalsSecond = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = False}, function = Function {isFunction = True}, defined = Defined {isDefined = False}, created = Created {getCreated = Nothing}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< ApplySymbolF (Application {applicationSymbolOrAlias = Symbol {symbolConstructor = Id {getId = "f", idLocation = AstLocationTest}, symbolParams = [], symbolSorts = ApplicationSorts {applicationSortsOperands = [SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})], applicationSortsResult = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, symbolAttributes = Symbol {function = Function {isDeclaredFunction = True}, functional = Functional {isDeclaredFunctional = False}, constructor = Constructor {isConstructor = False}, injective = Injective {isDeclaredInjective = False}, sortInjection = SortInjection {isSortInjection = False}, anywhere = Anywhere {isAnywhere = False}, hook = Hook {getHook = Nothing}, smtlib = Smtlib {getSmtlib = Nothing}, smthook = Smthook {getSmthook = Nothing}, memo = Memo {isMemo = False}, klabel = Klabel {getKlabel = Nothing}, symbolKywd = SymbolKywd {isSymbolKywd = False}, noEvaluators = NoEvaluators {hasNoEvaluators = False}}}, applicationChildren = [TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}]})}})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+FINAL STRETCH 1 27/10/20[Assignment_ {assignedVariable = Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, assignedTerm = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = False}, function = Function {isFunction = True}, defined = Defined {isDefined = False}, created = Created {getCreated = Nothing}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< ApplySymbolF (Application {applicationSymbolOrAlias = Symbol {symbolConstructor = Id {getId = "f", idLocation = AstLocationTest}, symbolParams = [], symbolSorts = ApplicationSorts {applicationSortsOperands = [SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})], applicationSortsResult = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, symbolAttributes = Symbol {function = Function {isDeclaredFunction = True}, functional = Functional {isDeclaredFunctional = False}, constructor = Constructor {isConstructor = False}, injective = Injective {isDeclaredInjective = False}, sortInjection = SortInjection {isSortInjection = False}, anywhere = Anywhere {isAnywhere = False}, hook = Hook {getHook = Nothing}, smtlib = Smtlib {getSmtlib = Nothing}, smthook = Smthook {getSmthook = Nothing}, memo = Memo {isMemo = False}, klabel = Klabel {getKlabel = Nothing}, symbolKywd = SymbolKywd {isSymbolKywd = False}, noEvaluators = NoEvaluators {hasNoEvaluators = False}}}, applicationChildren = [TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}]})}}]NormalizedSubstitution (fromList [])
+FINAL STRETCH 2 27/10/20
+FINAL STRETCH 3 27/10/20
+FINAL STRETCH 4 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True False and False
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< EqualsF (Equals {equalsOperandSort = (), equalsResultSort = (), equalsFirst = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}, equalsSecond = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = False}, function = Function {isFunction = True}, defined = Defined {isDefined = False}, created = Created {getCreated = Nothing}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< ApplySymbolF (Application {applicationSymbolOrAlias = Symbol {symbolConstructor = Id {getId = "f", idLocation = AstLocationTest}, symbolParams = [], symbolSorts = ApplicationSorts {applicationSortsOperands = [SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})], applicationSortsResult = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, symbolAttributes = Symbol {function = Function {isDeclaredFunction = True}, functional = Functional {isDeclaredFunctional = False}, constructor = Constructor {isConstructor = False}, injective = Injective {isDeclaredInjective = False}, sortInjection = SortInjection {isSortInjection = False}, anywhere = Anywhere {isAnywhere = False}, hook = Hook {getHook = Nothing}, smtlib = Smtlib {getSmtlib = Nothing}, smthook = Smthook {getSmthook = Nothing}, memo = Memo {isMemo = False}, klabel = Klabel {getKlabel = Nothing}, symbolKywd = SymbolKywd {isSymbolKywd = False}, noEvaluators = NoEvaluators {hasNoEvaluators = False}}}, applicationChildren = [TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}]})}})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+FINAL STRETCH 1 27/10/20[Assignment_ {assignedVariable = Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, assignedTerm = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = False}, function = Function {isFunction = True}, defined = Defined {isDefined = False}, created = Created {getCreated = Nothing}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< ApplySymbolF (Application {applicationSymbolOrAlias = Symbol {symbolConstructor = Id {getId = "f", idLocation = AstLocationTest}, symbolParams = [], symbolSorts = ApplicationSorts {applicationSortsOperands = [SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})], applicationSortsResult = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, symbolAttributes = Symbol {function = Function {isDeclaredFunction = True}, functional = Functional {isDeclaredFunctional = False}, constructor = Constructor {isConstructor = False}, injective = Injective {isDeclaredInjective = False}, sortInjection = SortInjection {isSortInjection = False}, anywhere = Anywhere {isAnywhere = False}, hook = Hook {getHook = Nothing}, smtlib = Smtlib {getSmtlib = Nothing}, smthook = Smthook {getSmthook = Nothing}, memo = Memo {isMemo = False}, klabel = Klabel {getKlabel = Nothing}, symbolKywd = SymbolKywd {isSymbolKywd = False}, noEvaluators = NoEvaluators {hasNoEvaluators = False}}}, applicationChildren = [TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}]})}}]NormalizedSubstitution (fromList [])
+FINAL STRETCH 2 27/10/20
+FINAL STRETCH 3 27/10/20
+FINAL STRETCH 4 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True False and False
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< EqualsF (Equals {equalsOperandSort = (), equalsResultSort = (), equalsFirst = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}, equalsSecond = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = False}, function = Function {isFunction = True}, defined = Defined {isDefined = False}, created = Created {getCreated = Nothing}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< ApplySymbolF (Application {applicationSymbolOrAlias = Symbol {symbolConstructor = Id {getId = "f", idLocation = AstLocationTest}, symbolParams = [], symbolSorts = ApplicationSorts {applicationSortsOperands = [SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})], applicationSortsResult = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, symbolAttributes = Symbol {function = Function {isDeclaredFunction = True}, functional = Functional {isDeclaredFunctional = False}, constructor = Constructor {isConstructor = False}, injective = Injective {isDeclaredInjective = False}, sortInjection = SortInjection {isSortInjection = False}, anywhere = Anywhere {isAnywhere = False}, hook = Hook {getHook = Nothing}, smtlib = Smtlib {getSmtlib = Nothing}, smthook = Smthook {getSmthook = Nothing}, memo = Memo {isMemo = False}, klabel = Klabel {getKlabel = Nothing}, symbolKywd = SymbolKywd {isSymbolKywd = False}, noEvaluators = NoEvaluators {hasNoEvaluators = False}}}, applicationChildren = [TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}]})}})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+FINAL STRETCH 1 27/10/20[Assignment_ {assignedVariable = Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, assignedTerm = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = False}, function = Function {isFunction = True}, defined = Defined {isDefined = False}, created = Created {getCreated = Nothing}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< ApplySymbolF (Application {applicationSymbolOrAlias = Symbol {symbolConstructor = Id {getId = "f", idLocation = AstLocationTest}, symbolParams = [], symbolSorts = ApplicationSorts {applicationSortsOperands = [SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})], applicationSortsResult = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, symbolAttributes = Symbol {function = Function {isDeclaredFunction = True}, functional = Functional {isDeclaredFunctional = False}, constructor = Constructor {isConstructor = False}, injective = Injective {isDeclaredInjective = False}, sortInjection = SortInjection {isSortInjection = False}, anywhere = Anywhere {isAnywhere = False}, hook = Hook {getHook = Nothing}, smtlib = Smtlib {getSmtlib = Nothing}, smthook = Smthook {getSmthook = Nothing}, memo = Memo {isMemo = False}, klabel = Klabel {getKlabel = Nothing}, symbolKywd = SymbolKywd {isSymbolKywd = False}, noEvaluators = NoEvaluators {hasNoEvaluators = False}}}, applicationChildren = [TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}]})}}]NormalizedSubstitution (fromList [])
+FINAL STRETCH 2 27/10/20
+FINAL STRETCH 3 27/10/20
+FINAL STRETCH 4 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True False and False
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< EqualsF (Equals {equalsOperandSort = (), equalsResultSort = (), equalsFirst = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}, equalsSecond = TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = False}, function = Function {isFunction = True}, defined = Defined {isDefined = False}, created = Created {getCreated = Nothing}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< ApplySymbolF (Application {applicationSymbolOrAlias = Symbol {symbolConstructor = Id {getId = "f", idLocation = AstLocationTest}, symbolParams = [], symbolSorts = ApplicationSorts {applicationSortsOperands = [SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})], applicationSortsResult = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}, symbolAttributes = Symbol {function = Function {isDeclaredFunction = True}, functional = Functional {isDeclaredFunctional = False}, constructor = Constructor {isConstructor = False}, injective = Injective {isDeclaredInjective = False}, sortInjection = SortInjection {isSortInjection = False}, anywhere = Anywhere {isAnywhere = False}, hook = Hook {getHook = Nothing}, smtlib = Smtlib {getSmtlib = Nothing}, smthook = Smthook {getSmthook = Nothing}, memo = Memo {isMemo = False}, klabel = Klabel {getKlabel = Nothing}, symbolKywd = SymbolKywd {isSymbolKywd = False}, noEvaluators = NoEvaluators {hasNoEvaluators = False}}}, applicationChildren = [TermLike {getTermLike = Pattern {patternSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}), freeVariables = FreeVariables {getFreeVariables = fromList [(SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}),SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []}))]}, functional = Functional {isFunctional = True}, function = Function {isFunction = True}, defined = Defined {isDefined = True}, created = Created {getCreated = Just []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any}), constructorLike = ConstructorLike {getConstructorLike = Nothing}} :< VariableF (Const (Variable {variableName = SomeVariableNameElement (ElementVariableName {unElementVariableName = VariableName {base = Id {getId = "x", idLocation = AstLocationTest}, counter = Nothing}}), variableSort = SortActualSort (SortActual {sortActualName = Id {getId = "testSort", idLocation = AstLocationTest}, sortActualSorts = []})}))}]})}})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+Entering MAKKKKKE
+before substitution simp
+WRAPPER
+SUBSTITUTION simplifier BEGIN
+ENTERING LOOP 27/10/20
+STILL IN LOOP 1 27/10/20
+STILL IN LOOP 2 27/10/20
+STILL IN LOOP 3 27/10/20
+Leaving LOOP 27/10/20 with normalization. The bools are: True True and True
+after substitution simp
+before scatter preds
+Entering MAKKKKKE
+before the let
+after scatter preds: Conditional {term = (), predicate = Predicate {getPredicate = CofreeT (Identity (PredicatePattern {freeVariables = FreeVariables {getFreeVariables = fromList []}, simplified = Simplified (SimplifiedData {sType = Fully, condition = Any})} :< TopF (Top {topSort = ()})))}, substitution = NormalizedSubstitution (fromList [])}
+Entering MAKKKKKE
