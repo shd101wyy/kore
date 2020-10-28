@@ -12,7 +12,7 @@ Portability : portable
 {-# LANGUAGE UndecidableInstances #-}
 
 module Kore.Internal.MultiOr
-    ( MultiOr
+    ( MultiOr (..)
     , bottom
     , filterOr
     , flatten
@@ -165,7 +165,7 @@ make
     :: (Ord term, TopBottom term)
     => [term]
     -> MultiOr term
-make patts = trace "Entering MAKKKKKE" $ filterOr (MultiOr patts)
+make patts = traceStack "Entering MAKKKKKE" $ filterOr (MultiOr patts)
 
 {- | Construct a normalized 'MultiOr' from a single pattern.
 -}

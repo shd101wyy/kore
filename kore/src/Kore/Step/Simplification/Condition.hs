@@ -145,11 +145,11 @@ simplify SubstitutionSimplifier { simplifySubstitution } sideCondition =
         
         predicates' <- trace "before substitution simp" $ lift $
             simplifySubstitution sideCondition substitution
-        predicate' <- trace "after substitution simp" $
-            trace "before scatter preds" $
+        predicate' <- traceStack "after substitution simp" $
+            traceStack "before scatter preds" $
             scatter predicates'
         
-        return $ trace ("after scatter preds: " ++ show (unparse predicate')) $ Conditional.andCondition conditional' predicate'
+        return $ traceStack ("after scatter preds: " ++ show predicate') $ Conditional.andCondition conditional' predicate'
 
 {- | Simplify the 'Predicate' once.
 

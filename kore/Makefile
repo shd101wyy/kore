@@ -23,7 +23,7 @@ test:
 	$(stack) test $(package)
 
 testp:
-	$(stack) test --test-arguments '-p "$(pattern)"' +RTS -N1
+	$(stack) test --test-arguments '-p "$(pattern)" +RTS -N1'
 
 test-ghci:
 	$(stack) ghci $(package):test:$(package)-test

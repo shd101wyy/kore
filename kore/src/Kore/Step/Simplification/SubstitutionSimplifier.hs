@@ -131,7 +131,7 @@ substitutionSimplifier =
         => SideCondition variable
         -> Substitution variable
         -> simplifier (OrCondition variable)
-    wrapper sideCondition substitution = trace ("WRAPPER") $
+    wrapper sideCondition substitution = traceStack ("WRAPPER") $
         OrCondition.observeAllT $ do
             traceM "SUBSTITUTION simplifier BEGIN"
             (predicate, result) <- worker substitution & maybeT empty return
@@ -288,22 +288,30 @@ simplifySubstitutionWorker sideCondition makeAnd' = \substitution -> do
 
     loop :: Impl variable simplifier (Normalization variable)
     loop = do
+        traceM "ENTERING LOOP 27/10/20"
         simplified <-
             takeSubstitution
             >>= deduplicate
             >>= return . normalize
             >>= traverse simplifyNormalizationOnce
+        traceM "STILL IN LOOP 1 27/10/20"
         substitution <- takeSubstitution
+        traceM "STILL IN LOOP 2 27/10/20"
         lastCount <- Lens.use (field @"count")
+        traceM "STILL IN LOOP 3 27/10/20"
         case simplified of
-            Nothing -> empty
+            Nothing -> traceStack "Leaving LOOP 27/10/20 with empty" empty
             Just normalization@Normalization { denormalized }
               | not fullySimplified, makingProgress -> do
+                traceM ("FINAL STRETCH 1 27/10/20" ++ show denormalized ++ show substitution)
                 Lens.assign (field @"count") thisCount
+                traceM "FINAL STRETCH 2 27/10/20"
                 addSubstitution substitution
+                traceM "FINAL STRETCH 3 27/10/20"
                 addSubstitution $ Substitution.wrapNormalization normalization
+                traceM "FINAL STRETCH 4 27/10/20"
                 loop
-              | otherwise -> return normalization
+              | otherwise -> return (traceStack ("Leaving LOOP 27/10/20 with normalization. The bools are: " ++ show (Substitution.null substitution) ++ " " ++ show (null denormalized) ++ " and " ++ show makingProgress) normalization)
               where
                 fullySimplified =
                     null denormalized && Substitution.null substitution

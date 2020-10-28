@@ -46,6 +46,7 @@ import qualified Logic
 
 import qualified Test.Kore.Step.MockSymbols as Mock
 import qualified Test.Kore.Step.Simplification as Test
+import Kore.Unparser (unparse)
 import Test.Tasty.HUnit.Ext
 
 assertNormalized :: Condition VariableName -> IO ()
@@ -72,22 +73,23 @@ test_simplifyCondition =
                 Condition.fromPredicate
                 $ Predicate.makeNotPredicate existsPredicate
         assertNormalized expect
-    , testCase "THISTEST x = f(x)" $ do
+    , testCase "xTHISTEST = f(x)" $ do
         traceM "Entering test case x = f(x)"
         let !x = inject Mock.x
+            !y = inject Mock.y
             !expect =
                 Predicate.makeEqualsPredicate (mkVar x) (Mock.f (mkVar x))
                 & OrCondition.fromPredicate
             !denormalized =
                 Substitution.mkUnwrappedSubstitution
-                [(x, Mock.f (mkVar x))]
+                [(x, Mock.f (mkVar y))]
             !input =
                 (Condition.fromSubstitution . Substitution.wrap) denormalized
-        traceM "BEGIN"
+        traceM ("BEGIN" ++ show input)
         actual <- normalizeExcept input
-        traceM "END"
+        traceM ("END\n" ++ show (unparse <$> MultiOr.getMultiOr actual) ++ "\n" ++ show (unparse <$> MultiOr.getMultiOr expect))
         assertEqual "Expected SubstitutionError" expect actual
-    , testCase "x = id(x)" $ do
+    , testCase " x = id(x)" $ do
         let x = inject Mock.x
             expect = OrCondition.fromCondition Condition.top
             input =
@@ -409,16 +411,14 @@ normalizeExcept
     -> IO (MultiOr (Conditional VariableName ()))
 normalizeExcept predicated = do
     traceM "normalizeExcept BEGIN"
-    let !result1 = trace "NORMALIZEEXCEPT0" $ Simplifier.simplifyCondition SideCondition.top predicated
-    let !result2 = trace "NORMALIZEEXCEPT1" $ Logic.lowerLogicT result1
-    
-    let !result3 = trace "NORMALIZEEXCEPT2" $ Monad.Unify.runUnifierT Not.notSimplifier result2
-    
-    let !result4 = trace "NORMALIZEEXCEPT3" $ Test.runSimplifier mockEnv (trace "BEFORE RESULT333333333" result3)
+    let !result1 = traceStack "NORMALIZEEXCEPT0" $ Simplifier.simplifyCondition SideCondition.top predicated
+        !result2 = traceStack "NORMALIZEEXCEPT1" $ Logic.lowerLogicT result1
+        !result3 = traceStack "NORMALIZEEXCEPT2" $ Monad.Unify.runUnifierT Not.notSimplifier result2
+        !result4 = traceStack "NORMALIZEEXCEPT3" $ Test.runSimplifier mockEnv (traceStack "BEFORE RESULT333333333" result3)
     result5 <- result4
     -- result <- fmap MultiOr.make result4
     traceM "normalizeExcept END"
-    return $ trace "inside RETURN" $ MultiOr.make result5
+    return $ traceStack "inside RETURN" $ MultiOr.make result5
   where
     mockEnv = Mock.env { simplifierAxioms }
     simplifierAxioms =
