@@ -38,7 +38,6 @@ import qualified Kore.Attribute.Symbol as Attribute
     ( Symbol
     )
 import qualified Kore.Builtin as Builtin
-import qualified Kore.Equation as Equation
 import Kore.IndexedModule.IndexedModule
     ( VerifiedModule
     )
@@ -52,12 +51,8 @@ import qualified Kore.IndexedModule.SortGraph as SortGraph
 import Kore.Internal.TermLike
     ( TermLike
     )
-import qualified Kore.Step.Axiom.EvaluationStrategy as Axiom.EvaluationStrategy
 import Kore.Step.Axiom.Identifier
     ( matchAxiomIdentifier
-    )
-import Kore.Step.Axiom.Registry
-    ( mkEvaluatorRegistry
     )
 import qualified Kore.Step.Function.Memo as Memo
 import qualified Kore.Step.Simplification.Condition as Condition
@@ -243,27 +238,11 @@ evalSimplifier verifiedModule simplifier = do
 
     initialize :: SimplifierT smt (Env (SimplifierT smt))
     initialize = do
-        equations <-
-            Equation.simplifyExtractedEquations
-            $ Equation.extractEquations verifiedModule'
-        let
-            builtinEvaluators, userEvaluators, simplifierAxioms
-                :: BuiltinAndAxiomSimplifierMap
-            userEvaluators = mkEvaluatorRegistry equations
-            builtinEvaluators =
-                Axiom.EvaluationStrategy.builtinEvaluation
-                <$> Builtin.koreEvaluators verifiedModule'
-            simplifierAxioms =
-                {-# SCC "evalSimplifier/simplifierAxioms" #-}
-                Map.unionWith
-                    Axiom.EvaluationStrategy.simplifierWithFallback
-                    builtinEvaluators
-                    userEvaluators
         memo <- Memo.new
         return Env
             { metadataTools
             , simplifierCondition
-            , simplifierAxioms
+            , simplifierAxioms = Map.empty
             , memo
             , injSimplifier
             , overloadSimplifier
