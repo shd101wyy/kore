@@ -240,7 +240,7 @@ translatePredicateWith translateTerm predicate =
             { applicationSymbolOrAlias
             , applicationChildren
             }
-      | isFunctionalPattern original =
+      | isFunctionPattern original =
         translateInterpretedApplication
         <|> translateUninterpreted'
       | otherwise =
