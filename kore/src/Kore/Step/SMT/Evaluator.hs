@@ -62,9 +62,6 @@ import Kore.Log.DebugEvaluateCondition
     ( debugEvaluateConditionResult
     , whileDebugEvaluateCondition
     )
-import Kore.Log.ErrorDecidePredicateUnknown
-    ( errorDecidePredicateUnknown
-    )
 import Kore.Log.WarnRetrySolverQuery
     ( warnRetrySolverQuery
     )
@@ -184,8 +181,7 @@ decidePredicate predicates =
             case result of
                 Unsat -> return False
                 Sat -> empty
-                Unknown ->
-                    errorDecidePredicateUnknown predicates
+                Unknown -> empty
         & runMaybeT
 
     whenUnknown f Unknown = f
