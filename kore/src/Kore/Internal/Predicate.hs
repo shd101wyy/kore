@@ -1230,6 +1230,18 @@ traverseVariables adj predicate =
         predicateF' <- case predicateF of
             ExistsF exists -> ExistsF <$> traverseExists avoiding exists
             ForallF forall -> ForallF <$> traverseForall avoiding forall
+            CeilF ceilP ->
+                let ceilP' = (traverse . TermLike.traverseVariables) adjReader ceilP
+                 in fmap CeilF ceilP'
+            EqualsF eqP ->
+                let eqP' = (traverse . TermLike.traverseVariables) adjReader eqP
+                 in fmap EqualsF eqP'
+            FloorF flrP ->
+                let flrP' = (traverse . TermLike.traverseVariables) adjReader flrP
+                 in fmap FloorF flrP'
+            InF inP ->
+                let inP' = (traverse . TermLike.traverseVariables) adjReader inP
+                 in fmap InF inP'
             _ ->
                 sequence predicateF
                     >>= traverseVariablesF askSomeVariableName
