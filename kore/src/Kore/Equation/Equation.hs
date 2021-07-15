@@ -1,6 +1,6 @@
 {- |
-Copyright   : (c) Runtime Verification, 2020
-License     : NCSA
+Copyright   : (c) Runtime Verification, 2020-2021
+License     : BSD-3-Clause
 -}
 module Kore.Equation.Equation (
     Equation (..),
@@ -52,10 +52,10 @@ import Kore.Internal.TermLike (
     mkVar,
  )
 import qualified Kore.Internal.TermLike as TermLike
-import Kore.Sort
-import Kore.Step.Step (
+import Kore.Rewrite.Step (
     Renaming,
  )
+import Kore.Sort
 import Kore.Substitute
 import Kore.Syntax.Application (
     Application (..),
@@ -350,7 +350,7 @@ refreshVariables
         let rename' :: Map (SomeVariableName variable) (SomeVariable variable)
             rename' =
                 FreeVariables.toSet originalFreeVariables
-                    & Fresh.refreshVariables avoid
+                    & Fresh.refreshVariablesSet avoid
             lookupSomeVariableName ::
                 forall variable'.
                 Injection (SomeVariableName variable) variable' =>

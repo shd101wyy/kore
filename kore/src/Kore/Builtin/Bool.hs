@@ -1,6 +1,6 @@
 {- |
-Copyright   : (c) Runtime Verification, 2018
-License     : NCSA
+Copyright   : (c) Runtime Verification, 2018-2021
+License     : BSD-3-Clause
 -}
 module Kore.Builtin.Bool (
     sort,
@@ -59,8 +59,8 @@ import Kore.Internal.TermLike
 import Kore.Log.DebugUnifyBottom (
     debugUnifyBottomAndReturnBottom,
  )
-import Kore.Rewriting.RewritingVariable
-import Kore.Step.Simplification.Simplify (
+import Kore.Rewrite.RewritingVariable
+import Kore.Simplify.Simplify (
     BuiltinAndAxiomSimplifier,
     TermSimplifier,
  )

@@ -1,6 +1,6 @@
 {- |
-Copyright   : (c) Runtime Verification, 2018
-License     : NCSA
+Copyright   : (c) Runtime Verification, 2018-2021
+License     : BSD-3-Clause
 -}
 module Kore.Internal.Predicate (
     Predicate, -- Constructor not exported on purpose
@@ -47,6 +47,9 @@ module Kore.Internal.Predicate (
     wrapPredicate,
     containsSymbolWithIdPred,
     traverseVariables,
+    refreshExists,
+    toMultiAnd,
+    fromMultiAnd,
     pattern PredicateTrue,
     pattern PredicateFalse,
     pattern PredicateAnd,
@@ -100,6 +103,10 @@ import Kore.Attribute.PredicatePattern (
 import qualified Kore.Attribute.PredicatePattern as PredicatePattern
 import Kore.Attribute.Synthetic
 import Kore.Debug
+import Kore.Internal.MultiAnd (
+    MultiAnd,
+ )
+import qualified Kore.Internal.MultiAnd as MultiAnd
 import qualified Kore.Internal.SideCondition.SideCondition as SideCondition (
     Representation,
  )
@@ -141,10 +148,6 @@ import Kore.TopBottom (
     TopBottom (..),
  )
 import Kore.Unparser
-import Kore.Variables.Binding (
-    existsBinder,
-    forallBinder,
- )
 import Kore.Variables.Fresh (
     refreshElementVariable,
  )
@@ -260,6 +263,7 @@ instance From (Not () child) (PredicateF variable child) where
     from = NotF
     {-# INLINE from #-}
 
+-- | @Predicate@ is the internal form of Kore predicates.
 newtype Predicate variable = Predicate
     { getPredicate ::
         Cofree (PredicateF variable) (PredicatePattern variable)
@@ -489,6 +493,20 @@ instance InternalVariable variable => Substitute (Predicate variable) where
         substituteDefault = synthesize (substitute subst' <$> predF)
           where
             _ :< predF = Recursive.project predicate
+
+instance
+    InternalVariable variable =>
+    From (MultiAnd (Predicate variable)) (Predicate variable)
+    where
+    from = fromMultiAnd
+    {-# INLINE from #-}
+
+instance
+    InternalVariable variable =>
+    From (Predicate variable) (MultiAnd (Predicate variable))
+    where
+    from = toMultiAnd
+    {-# INLINE from #-}
 
 unparseWithSort ::
     forall variable ann.
@@ -1355,3 +1373,18 @@ containsSymbolWithIdPred symId (Recursive.project -> _ :< predicate) =
         CeilF x -> any (containsSymbolWithId symId) x
         FloorF x -> any (containsSymbolWithId symId) x
         _ -> any (containsSymbolWithIdPred symId) predicate
+
+fromMultiAnd ::
+    InternalVariable variable =>
+    MultiAnd (Predicate variable) ->
+    Predicate variable
+fromMultiAnd predicates =
+    case toList predicates of
+        [] -> makeTruePredicate
+        _ -> foldr1 makeAndPredicate predicates
+
+toMultiAnd ::
+    Ord variable =>
+    Predicate variable ->
+    MultiAnd (Predicate variable)
+toMultiAnd = MultiAnd.make . getMultiAndPredicate

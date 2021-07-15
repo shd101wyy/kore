@@ -1,6 +1,6 @@
 {- |
 Copyright   : (c) Runtime Verification, 2021
-License     : NCSA
+License     : BSD-3-Clause
 -}
 module Kore.Log.WarnUnsimplifiedPredicate (
     WarnUnsimplifiedPredicate (..),
@@ -16,7 +16,7 @@ import Kore.Internal.MultiOr (
 import Kore.Internal.Predicate (
     Predicate,
  )
-import Kore.Rewriting.RewritingVariable
+import Kore.Rewrite.RewritingVariable
 import Log
 import Prelude.Kore
 import Pretty (

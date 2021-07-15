@@ -1,8 +1,8 @@
 {- |
 Module      : Kore.Builtin.String
 Description : Built-in string sort
-Copyright   : (c) Runtime Verification, 2018
-License     : NCSA
+Copyright   : (c) Runtime Verification, 2018-2021
+License     : BSD-3-Clause
 Maintainer  : vladimir.ciobanu@runtimeverification.com
 Stability   : experimental
 Portability : portable
@@ -98,13 +98,13 @@ import Kore.Log.DebugUnifyBottom (
     debugUnifyBottomAndReturnBottom,
  )
 import Kore.Log.WarnNotImplemented
-import Kore.Rewriting.RewritingVariable (
+import Kore.Rewrite.RewritingVariable (
     RewritingVariableName,
  )
-import Kore.Step.Simplification.NotSimplifier (
+import Kore.Simplify.NotSimplifier (
     NotSimplifier (..),
  )
-import Kore.Step.Simplification.Simplify (
+import Kore.Simplify.Simplify (
     BuiltinAndAxiomSimplifier,
     TermSimplifier,
  )

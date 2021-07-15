@@ -5,8 +5,8 @@ Module      : Kore.Builtin.AssociativeCommutative
 Description : Handles built-in operations which are associative, commutative,
               with neutral elements, key-based, with unique keys, and which
               return bottom when applied to unique keys.
-Copyright   : (c) Runtime Verification, 2019
-License     : NCSA
+Copyright   : (c) Runtime Verification, 2019-2021
+License     : BSD-3-Clause
 Maintainer  : virgil.serbanuta@runtimeverification.com
 
 This module is intended to be imported qualified, to avoid collision with other
@@ -107,13 +107,13 @@ import qualified Kore.Internal.TermLike as TermLike
 import Kore.Log.DebugUnifyBottom (
     debugUnifyBottomAndReturnBottom,
  )
-import Kore.Rewriting.RewritingVariable (
+import Kore.Rewrite.RewritingVariable (
     RewritingVariableName,
  )
+import Kore.Simplify.Simplify as Simplifier
 import Kore.Sort (
     Sort,
  )
-import Kore.Step.Simplification.Simplify as Simplifier
 import Kore.Syntax.Variable
 import Kore.Unification.Unify (
     MonadUnify,

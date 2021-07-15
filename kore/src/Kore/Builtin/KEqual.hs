@@ -1,8 +1,8 @@
 {- |
 Module      : Kore.Builtin.KEqual
 Description : Built-in KEQUAL operations
-Copyright   : (c) Runtime Verification, 2018
-License     : NCSA
+Copyright   : (c) Runtime Verification, 2018-2021
+License     : BSD-3-Clause
 Maintainer  : traian.serbanuta@runtimeverification.com
 Stability   : experimental
 Portability : portable
@@ -72,11 +72,11 @@ import Kore.Internal.SideCondition (
 import qualified Kore.Internal.SideCondition as SideCondition
 import Kore.Internal.Symbol
 import Kore.Internal.TermLike as TermLike
-import Kore.Rewriting.RewritingVariable (
+import Kore.Rewrite.RewritingVariable (
     RewritingVariableName,
  )
-import Kore.Step.Simplification.NotSimplifier
-import Kore.Step.Simplification.Simplify
+import Kore.Simplify.NotSimplifier
+import Kore.Simplify.Simplify
 import Kore.Syntax.Definition (
     SentenceSymbol (..),
  )

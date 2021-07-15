@@ -1,8 +1,8 @@
 {- |
 Module      : Kore.Builtin.Set
 Description : Built-in sets
-Copyright   : (c) Runtime Verification, 2018
-License     : NCSA
+Copyright   : (c) Runtime Verification, 2018-2021
+License     : BSD-3-Clause
 Maintainer  : thomas.tuegel@runtimeverification.com
 
 This module is intended to be imported qualified, to avoid collision with other
@@ -98,13 +98,13 @@ import qualified Kore.Internal.TermLike as TermLike
 import Kore.Log.DebugUnifyBottom (
     debugUnifyBottomAndReturnBottom,
  )
-import Kore.Rewriting.RewritingVariable (
+import Kore.Rewrite.RewritingVariable (
     RewritingVariableName,
  )
+import Kore.Simplify.Simplify as Simplifier
 import Kore.Sort (
     Sort,
  )
-import Kore.Step.Simplification.Simplify as Simplifier
 import Kore.Syntax.Sentence (
     SentenceSort (SentenceSort),
  )
