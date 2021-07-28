@@ -19,4 +19,5 @@ module SET-DIFFERENCE
       [simplification]
 
     rule [pred.false]: pred(X) => false requires 1 <=Int X andBool X <=Int 9 [simplification]
+    rule [pred.true]:  pred(10) => true
 endmodule

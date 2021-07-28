@@ -20,10 +20,11 @@ module SET-DIFFERENCE-SPEC
           <k> run(SetItem(1) -Set SetItem(X)) => done(SetItem(1)) ... </k>
       requires pred(X)
 
-    // This claim does not pass, am I missing something?
+    // This claim does not pass
     // claim [claim.diff.left.symbolic.singleton]:
     //       <k> run(SetItem(X) -Set SetItem(10)) => done(SetItem(X)) ... </k>
-    //   requires notBool pred(X)
+    //       requires X =/=Int 10
+      // requires notBool pred(X) andBool pred(10)
 
     claim [claim.diff.symbolic.singletons]:
           <k> run(SetItem(X) -Set SetItem(Y)) => done(SetItem(X)) ... </k>
