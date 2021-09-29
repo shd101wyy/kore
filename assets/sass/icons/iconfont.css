@@ -1,0 +1,36 @@
+@font-face {
+	font-family: "iconfont";
+	src: url("iconfont.eot?a0e135221bce12f008776761d32e3166?#iefix") format("embedded-opentype"),
+url("iconfont.woff2?a0e135221bce12f008776761d32e3166") format("woff2"),
+url("iconfont.woff?a0e135221bce12f008776761d32e3166") format("woff");
+}
+
+.icon {
+	line-height: 1;
+}
+
+.icon:before {
+	font-family: iconfont !important;
+	font-style: normal;
+	font-weight: normal !important;
+	vertical-align: top;
+}
+
+.icon-close-fullscreen:before {
+	content: "\f101";
+}
+.icon-open-fullscreen:before {
+	content: "\f102";
+}
+.icon-output:before {
+	content: "\f103";
+}
+.icon-coverage:before {
+	content: "\f104";
+}
+.icon-more:before {
+	content: "\f105";
+}
+.icon-copy:before {
+	content: "\f106";
+}
