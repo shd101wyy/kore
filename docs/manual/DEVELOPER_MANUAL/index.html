@@ -327,12 +327,12 @@
 </ul>
 <p>Sometimes <em>languages</em> and <em>workflows</em> overlap, but this should be avoided.</p>
 <h4 id="implementation-context-map-low-level">Low-level</h4>
-<p><img src="../../../../assets/img/gh-pages/docs/manual/img/implementation/context-map/context-map-low-level.jpg" alt="context-map-low-level.jpg"></p>
+<p><img src="../../../assets/img/gh-pages/docs/manual/img/implementation/context-map/context-map-low-level.jpg" alt="context-map-low-level.jpg"></p>
 <p>This diagram is intended to be normative. Question carefully any instance where the actual dependencies differ significantly from the relationships shown here. Note that all internal modules depend on Kore.Internal, but these are omitted for clarity. The diagram only depicts the core domain models. There are utility contexts for logging, databases, etc. which are not shown.</p>
 <h4 id="implementation-context-map-interface">Interface</h4>
-<p><img src="../../../../assets/img/gh-pages/docs/manual/img/implementation/context-map/context-map-interface.jpg" alt="context-map-interface.jpg"></p>
+<p><img src="../../../assets/img/gh-pages/docs/manual/img/implementation/context-map/context-map-interface.jpg" alt="context-map-interface.jpg"></p>
 <h4 id="implementation-context-map-workflow">Workflow</h4>
-<p><img src="../../../../assets/img/gh-pages/docs/manual/img/implementation/context-map/context-map-workflow.jpg" alt="context-map-workflow.jpg"></p>
+<p><img src="../../../assets/img/gh-pages/docs/manual/img/implementation/context-map/context-map-workflow.jpg" alt="context-map-workflow.jpg"></p>
 <p>Kore.Exec and Kore.Repl control the input/output cycle with the user. These modules drive the data flow through the backend. Input passes through parsing and validation. The interface between these is mediated by Kore.Syntax. The valid definition and claims or patterns pass to Kore.Reachability, with the interface mediated by Kore.Internal and the other representations. The claims or program iterate through Kore.Rewrite and Kore.Simplify according to the controller, Kore.Reachability.</p>
 <h3 id="implementation-hooks">Hooks</h3>
 <h4 id="implementation-hooks-add-builtin-hook">How To: Add Builtin Hook</h4>
